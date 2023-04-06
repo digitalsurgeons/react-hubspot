@@ -27,6 +27,8 @@ This command will also install the required dependencies (`react` and `axios`) s
 
 ## Usage
 
+### Basic
+
 ```jsx
 import React from 'react';
 import { useForm } from '@digitalsurgeons/react-hubspot'
@@ -47,6 +49,18 @@ function App() {
 export default App;
 ```
 
+### With Hubspot Tracking
+
+By default, this component does not Hubspot tracking enabled. To enable Hubspot tracking, set the `enableCookieTracking` option to `true`.
+
+```jsx
+const { data, isLoading, isError, handleSubmit } = useForm({
+  portalId: '<PORTAL_ID>',
+  formId: '<FORM_ID>',
+  enableCookieTracking: true
+})
+```
+
 ## Project Overview
 
 The React-Hubspot project contains the following important subdirectories and files:
@@ -58,19 +72,22 @@ react-hubspot/
 |   |-- workflows/
 |       |-- main.yml
 |-- README.md
-|-- package-lock.json
 |-- package.json
+|-- yarn.lock
 |-- src/
+|   |-- index.js
+|   |-- useForm.js
+|-- dist/
 |   |-- index.js
 |   |-- useForm.js
 ```
 
-* `src/index.js` has the main code for the React hooks.
-* `src/useForm.js` has the code for the `useForm` hook.
-* `.babelrc` has babel configurations.
-* `.github/workflows/main.yml` publishes the package to npm.
-* `package.json` has project metadata and scripts.
-* `package-lock.json` has lockfile information.
+* `src/index.js` - main code for the React hooks.
+* `src/useForm.js` - `useForm` hook.
+* `.babelrc` - Babel configurations for supporting ES6+.
+* `.github/workflows/main.yml` - GitHub Action to publish NPM when tags are pushed to /main.
+* `package.json` - project metadata and scripts.
+* `yarn.lock` - the exact versions of the dependencies installed.
 
 ## Contributing
 
