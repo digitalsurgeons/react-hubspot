@@ -1,6 +1,6 @@
 {
   "name": "@digitalsurgeons/react-hubspot",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A collection of React hooks for interacting with Hubspot APIs",
   "main": "./dist/index.js",
   "author": "digitalsurgeons",
