@@ -29,10 +29,12 @@ const useForm = ({ portalId, formId, enableCookieTracking }) => {
     setIsLoading(true)
     try {
       const formData = new FormData(form)
-      const { entries } = formData
 
       const data = {
-        fields: [...entries()].map(([name, value]) => ({ name, value })),
+        fields: [...formData.entries()].map(([name, value]) => ({
+          name,
+          value
+        })),
         context: {
           hutk: enableCookieTracking ? getHubspotUtkCookie() : null,
           pageUri: window.location.href,
@@ -54,6 +56,7 @@ const useForm = ({ portalId, formId, enableCookieTracking }) => {
       setData(result)
       setForm(false)
     } catch (e) {
+      console.error('[@digitalsurgeons/react-hubspot] Form submit error:', e)
       setIsError(true)
       setForm(false)
     }
