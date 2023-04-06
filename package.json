@@ -1,9 +1,9 @@
 {
-  "name": "react-hubspot",
+  "name": "@digitalsurgeons/react-hubspot",
   "version": "1.0.4",
   "description": "A collection of React hooks for interacting with Hubspot APIs",
   "main": "./dist/index.js",
-  "author": "Adam Soffer",
+  "author": "digitalsurgeons",
   "scripts": {
     "build": "babel src --out-dir dist",
     "prepare": "npm run build"
@@ -21,6 +21,9 @@
     "axios": "^0.21.1",
     "react": "^16.8.0-alpha.1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
@@ -32,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:adamsoffer/react-hubspot.git"
+    "url": "git@github.com:digitalsurgeons/react-hubspot.git"
   },
   "keywords": [
     "react",
