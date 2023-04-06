@@ -77,10 +77,41 @@ react-hubspot/
 We welcome contributions from the community. To contribute, follow these steps:
 
 1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Test your changes
-5. Submit a pull request
+
+```sh
+gh repo clone digitalsurgeons/react-hubspot
+```
+
+2. Set up the project
+
+```sh
+yarn
+```
+
+3. Create a new branch using git flow
+
+```sh
+# If you haven't installed git flow, run the following command:
+brew install git-flow
+# If you haven't initialized git flow, run the following command:
+git flow init
+# Create a new branch
+git flow feature start <feature-name>
+```
+
+4. Make your changes
+5. Test your changes
+6. Lint your changes
+
+```sh
+yarn lint
+```
+
+6. Submit a pull request
+
+```sh
+gh pr create
+```
 
 ### Contributors
 
