@@ -12,7 +12,6 @@ React-Hubspot is a collection of React hooks for interacting with Hubspot APIs.
 * [Usage](#usage)
 * [Project Overview](#project-overview)
 * [Contributing](#contributing)
-* [Testing](#testing)
 * [License](#license)
 * [Acknowledgements](#acknowledgements)
 
@@ -87,16 +86,6 @@ We welcome contributions from the community. To contribute, follow these steps:
 
 * Adam Soffer ([@adamsoffer](https://github.com/adamsoffer))
 * Digital Surgeons ([@digitalsurgeons](https://github.com/digitalsurgeons))
-
-## Testing
-
-To run tests, use the following command:
-
-```sh
-npm test
-```
-
-This will run Jest, which is configured to run the tests specified in the `__tests__` directory.
 
 ## License
 
