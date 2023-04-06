@@ -61,14 +61,11 @@ const useForm = ({ portalId, formId, enableCookieTracking }) => {
     setIsLoading(false)
   }
 
-  useEffect(
-    () => {
-      if (form) {
-        fetchData()
-      }
-    },
-    [form]
-  )
+  useEffect(() => {
+    if (form) {
+      fetchData()
+    }
+  }, [form])
 
   const handleSubmit = e => {
     e.preventDefault()
